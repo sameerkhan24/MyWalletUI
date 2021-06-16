@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mywalletui/data.dart';
+import 'package:mywalletui/widgets/cardSection.dart';
 import 'package:mywalletui/widgets/header.dart';
 
 void main() {
@@ -15,13 +17,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: primaryColor,
       body: Column(
         children: [
+          SizedBox(height: 20,),
           Container(
             height: 120,
             child: WalletHeader(),
           ),
-          Expanded(child: Container()),
+          const Expanded(child: CardSection()),
           Expanded(child: Container())
         ],
       ),
